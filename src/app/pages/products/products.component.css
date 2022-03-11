@@ -1,0 +1,26 @@
+.pcard{
+    /* background: #e6e4e4; */
+    padding:12px;
+    margin: .5%;
+    width:273px;
+}
+.pcard:hover{
+    box-shadow: 0px 3px 20px 0px;
+}
+.pr{
+    position: relative;
+    top: 10px;
+    font-size:16px;
+    padding-right: 2px;
+}
+.btn-outline-success{
+    float: right;
+}
+img{ 
+    height: 100%;
+    width: 100%;
+}
+.title-f{
+    font-size: 25px;
+    font-weight: 400;
+}

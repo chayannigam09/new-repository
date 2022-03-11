@@ -1,0 +1,18 @@
+.empty{
+    height: 15rem;
+    width: 18rem;
+    display: flex;
+    margin: 0px auto;
+}
+.cart{
+    /* border: 2px solid; */
+    padding: 2rem;
+    border-radius:10px;
+    box-shadow: 0px 0px 15px 0px;
+}
+/* .table-bordered{ */
+    /* padding: 1rem;
+    /* border-radius:10px; 
+    box-shadow: 0px 0px 5px 0px; */
+    
+/* } */

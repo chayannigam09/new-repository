@@ -1,0 +1,39 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+    <div class="container">
+      <a class="navbar-brand" routerLink="/home">VegiShop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/contact">Contact Us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <i routerLink="/cart" class="fa fa-cart-plus" style="font-size: x-large; cursor: pointer;"></i>
+          <!-- <button class="btn btn-outline-danger" type="submit">Logout</button> -->
+        </div><span class="badge bg-danger ms-1">8</span>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="inner-content pt-5">
+  <div class="container mt-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<footer class=" bg-success text-center text-lg-start mt-5">
+  <div class="text-center p-3" style="background-color: rgba(28, 252, 8, 0.829);">
+    © 2020 Copyright:
+    <a class="text-dark" routerLink="/
+    ">VegiShop.in</a>
+  </div>
+</footer>

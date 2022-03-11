@@ -1,0 +1,63 @@
+<div *ngIf="false" class="container mt-5 cart">
+    <div class="empty_cart text-center col-12 col-md-5 m-auto">
+        <img src="../../../assets/img/empty_cart.jpeg" class="img-responsive empty" alt="">
+        <h3 class="text-center">Your cart is empty</h3>
+        <button class="btn btn-outline-success w-50"routerLink="/">Shop Now</button>
+    </div>
+</div>
+<div class="container mt-5 card">
+    <table class="table table-responsive ">
+        <thead>
+            <tr>
+                <th>S no.</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Amount (INR)</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Tomato</td>
+                <td>1</td>
+                <td>10</td>
+                <td><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Tomato</td>
+                <td>1</td>
+                <td>10</td>
+                <td><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Tomato</td>
+                <td>1</td>
+                <td>10</td>
+                <td><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Tomato</td>
+                <td>1</td>
+                <td>10</td>
+                <td><i class="fa fa-trash"></i></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="d-flex justify-content-end">
+    <div class="chekout-box card d-flex mt-3 col-12 col-md-5">
+        <div class="card-title mx-3 h5 py-1">Item Total</div>
+        <div class="col-12 px-5">
+            <table class="card-body table table-responsive table-bordered">
+                <tr><td>Total :</td>
+                <td>250rs.</td></tr>
+            </table>
+        </div>
+        <div class="px-5 py-1"><button type="button" class="btn btn-outline-success w-80 text-center col-12 mb-2" routerLink="/chekout">Proceed to chekout</button></div>
+    </div>
+</div>

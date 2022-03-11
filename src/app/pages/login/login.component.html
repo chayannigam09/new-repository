@@ -1,0 +1,41 @@
+  <div class="container" >    
+      <div class="row mt-5 d-flex justify-content-center p-5 form-box">
+        <div class="col-md-5 col-12 p-0">
+          <img src="../../../assets/img/blog-4.jpg" alt="">
+        </div>
+        <div class="col-md-5 col-12 form">
+          <form>
+            <h3>{{registerForm?'Register':'Log in'}}</h3>
+            <div *ngIf="registerForm" class="form-group d-flex justify-content-center">
+              <input type="text" placeholder="username" class="form-control my-2"/>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" placeholder="email" class="form-control my-2"/>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+            <input type="Password" placeholder="password" class="form-control my-2"/>
+            </div>
+            <div *ngIf="!registerForm" class="form-group d-flex justify-content-center">
+              <a (click)="showModal()">Forgot password?</a>
+            </div>
+            <div class="form-group d-flex justify-content-center pt-1">
+              <button type="button" class="btn btn-outline-success" routerLink="/products">{{registerForm?'Register':'Log in'}}</button>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <p>{{registerForm?"Already have an account?":"Don't have an account?"}}<a (click)="changeForm()">click here</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  <nz-modal  [(nzVisible)]="isVisible" nzTitle="Forgot Password"  [nzContent]="modalContent" (nzOnCancel)="handleCancel()"  [nzOkLoading]="isOkLoading">
+    <ng-template #modalContent>
+     <form> 
+      <input type="text" placeholder="Enter your email" class="form-control mt-1">
+      <div class="d-flex justify-content-center pt-3">
+        <button type="button" class="btn btn-success w-80 text-center col-12 col-md-8" (click)="createBasicNotification()">Send</button>
+      </div>
+      </form>
+    </ng-template>
+   
+  </nz-modal>
