@@ -5,7 +5,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <div class="content text-center">
-            <h1 class="mb-3">Contact Us</h1>
+            <h1 class="mb-3">Add Products</h1>
           </div>
         </div>
       </div>
@@ -21,23 +21,29 @@
                        <div class="row">
                           <div class="col-lg-6">
                               <div class="form-group mb-4">
-                                <label for="full_name">Full Name</label>
-                                <input type="text" class="form-control" id="full_name" formControlName="name" placeholder="">
+                                <label for="full_name">Product Name</label>
+                                <input type="text" class="form-control" id="full_name" formControlName="productname" placeholder="">
                              </div>
                           </div>
                           <div class="col-lg-6">
                               <div class="form-group mb-4">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" formControlName="email" placeholder="">
+                                <label for="email">Description</label>
+                                <input type="text" class="form-control" id="email" formControlName="description" placeholder="">
                              </div>
                           </div>
-                          <div class="col-lg-12">
-                              <div class="form-group mb-4">
-                                <label for="msg">Message</label>
-                                <!-- <input type="text" class="form-control" id="msg" placeholder=""> -->
-                                <textarea class="form-control" id="msg" placeholder="" formControlName="message"></textarea>
-                             </div>
+                          <div class="col-lg-6">
+                            <div class="form-group mb-4">
+                              <label for="email">Price</label>
+                              <input type="text" class="form-control" formControlName="price" placeholder=" in INR">
+                            </div>
                           </div>
+                          <div class="col-lg-6">
+                            <div class="form-group mb-4">
+                              <label for="email">Product Image</label>
+                              <input type="file" class="form-control" formControlName="image" enctype="multipart/form-data" (change)="onFileChange($event)" placeholder="">
+                            </div>
+                          </div>
+                          
                           <div class="col-lg-12 d-flex justify-content-end">
                             <button type="submit" class="btn btn-success w-80 text-center col-12 col-md-4">Send</button>
                           </div>

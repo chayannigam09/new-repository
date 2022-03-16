@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AddProductsComponent } from './pages/add-products/add-products.component';
 
 const routes: Routes = [
 {
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: 'products', component: ProductsComponent},
     { path: 'chekout', component: CheckoutComponent},
     { path: 'contact', component: ContactComponent},
+    { path: 'addproducts', component: AddProductsComponent},
     { path: '**' , redirectTo: '/'}
   ]
 

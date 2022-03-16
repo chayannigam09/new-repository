@@ -4,22 +4,26 @@
           <img src="../../../assets/img/blog-4.jpg" alt="">
         </div>
         <div class="col-md-5 col-12 form">
-          <form>
+          <form [formGroup]="validateForm" (ngSubmit)="submitForm('1')">
             <h3>{{registerForm?'Register':'Log in'}}</h3>
-            <div *ngIf="registerForm" class="form-group d-flex justify-content-center">
-              <input type="text" placeholder="username" class="form-control my-2"/>
+            
+            <div class="form-group d-flex justify-content-center">
+              <input type="text" placeholder="email" formControlName="email" class="form-control my-2"/>
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="text" placeholder="email" class="form-control my-2"/>
-            </div>
-            <div class="form-group d-flex justify-content-center">
-            <input type="Password" placeholder="password" class="form-control my-2"/>
+            <input [type]="isPasswordVisible?'Password':'text'" placeholder="password" formControlName="password" style="margin-left:10px" class="form-control my-2"/>
+            <i *ngIf="isPasswordVisible" class="fa fa-eye" (click)="isPasswordVisible=!isPasswordVisible"></i>
+            <i *ngIf="!isPasswordVisible" class="fa fa-eye-slash" (click)="isPasswordVisible=!isPasswordVisible"></i>
             </div>
             <div *ngIf="!registerForm" class="form-group d-flex justify-content-center">
               <a (click)="showModal()">Forgot password?</a>
             </div>
+            <div *ngIf="registerForm" class="form-group d-flex justify-content-center">
+              <br>
+            </div>
             <div class="form-group d-flex justify-content-center pt-1">
-              <button type="button" class="btn btn-outline-success" routerLink="/products">{{registerForm?'Register':'Log in'}}</button>
+              <button type="button" *ngIf="registerForm" class="btn btn-outline-success" (click)="submitForm('0')">Register</button>
+              <button type="submit" *ngIf="!registerForm" class="btn btn-outline-success">Log in</button>
             </div>
             <div class="form-group d-flex justify-content-center">
               <p>{{registerForm?"Already have an account?":"Don't have an account?"}}<a (click)="changeForm()">click here</a></p>
@@ -30,10 +34,10 @@
   </div>
   <nz-modal  [(nzVisible)]="isVisible" nzTitle="Forgot Password"  [nzContent]="modalContent" (nzOnCancel)="handleCancel()"  [nzOkLoading]="isOkLoading">
     <ng-template #modalContent>
-     <form> 
-      <input type="text" placeholder="Enter your email" class="form-control mt-1">
+     <form [formGroup]="validateForm" (ngSubmit)="forgotPassword()"> 
+      <input type="text" placeholder="Enter your email" formControlName="email" class="form-control mt-1">
       <div class="d-flex justify-content-center pt-3">
-        <button type="button" class="btn btn-success w-80 text-center col-12 col-md-8" (click)="createBasicNotification()">Send</button>
+        <button type="submit" class="btn btn-success w-80 text-center col-12 col-md-8">Send</button>
       </div>
       </form>
     </ng-template>

@@ -13,6 +13,8 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { SharedModule } from './shared/shared.module';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddProductsComponent } from './pages/add-products/add-products.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { ContactComponent } from './pages/contact/contact.component';
     ProductsComponent,
     CheckoutComponent,
     ContactComponent,
+    AddProductsComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,6 +23,7 @@ import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 
 // export const options: Partial<IConfig> | (() => Partial<IConfig>) = null!;
 
@@ -53,7 +54,8 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
     NzDrawerModule,
     NzSelectModule,
     NzUploadModule,
-    NzSpaceModule
+    NzSpaceModule,
+    NzToolTipModule 
   ],
   exports: [
     CommonModule,
@@ -80,7 +82,8 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
     NzDrawerModule,
     NzSelectModule,
     NzUploadModule,
-    NzSpaceModule
+    NzSpaceModule,
+    NzToolTipModule 
   ]
 })
 export class SharedModule { }
