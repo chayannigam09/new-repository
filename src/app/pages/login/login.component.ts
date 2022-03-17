@@ -54,6 +54,8 @@ export class LoginComponent implements OnInit {
         this.coreService.post("http://localhost:3000/login",userdata).subscribe((res:any) => {
         localStorage.setItem('token',res.token);
         this.router.navigate(['/products']);
+      },(err)=>{
+
       })
       }
     }else if (!this.validateForm.valid) {
